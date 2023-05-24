@@ -1,0 +1,87 @@
+@import "../../style_config/variable.scss";
+@import "../../style_config/mixins.scss";
+
+.footer {
+  padding-bottom: 0;
+}
+.footer-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  .footer-logo {
+    width: 120px;
+    @include small-screen {
+      width: 150px;
+    }
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+  .footer-menu-items {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    .footer-menu-item {
+      @include typography(12px, 400, 20px);
+      color: $white;
+      margin: 0 10px;
+      cursor: pointer;
+      @include small-screen {
+      @include typography(18px, 400, 22px);
+      margin: 0 12.5px;
+
+      }
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
+  .social-icons {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    transform: scale(0.7);
+    @include small-screen {
+      margin-top: 30px;
+      transform: scale(1);
+    }
+    .social-icon {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $white;
+      font-size: 18px;
+      cursor: pointer;
+      margin: 0 12.5px;
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
+  .bottom-bar {
+    width: 100%;
+    height: 50px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+    @include small-screen {
+      height: 75px;
+      margin-top: 75px;
+    }
+    .copyright-text {
+      color: #777777;
+      @include typography(14px, 400, 22px);
+    }
+  }
+}
